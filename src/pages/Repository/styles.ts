@@ -1,9 +1,28 @@
-import styled from 'styled-components';
-import { shade } from 'polished';
+import styled, { keyframes } from 'styled-components';
+import { FiLoader } from 'react-icons/fi';
 
-interface FormProps {
-  hasError: boolean;
-}
+// Create the keyframes
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Loading = styled(FiLoader)`
+  animation: ${rotate} 2s infinite linear;
+  color: #04d361;
+`;
+
+export const LoadingContainer = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const Header = styled.header`
   display: flex;
@@ -83,6 +102,7 @@ export const RepositoryInfo = styled.section`
 
 export const Issues = styled.section`
   margin-top: 80px;
+  margin-bottom: 20px;
 
   a {
     background: #fff;

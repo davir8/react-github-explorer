@@ -58,6 +58,7 @@ export const Form = styled.form<FormProps>`
 
 export const Repositories = styled.div`
   margin-top: 80px;
+  margin-bottom: 20px;
   max-width: 700px;
 
   a {
